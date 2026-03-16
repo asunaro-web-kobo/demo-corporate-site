@@ -1,0 +1,666 @@
+@charset "UTF-8";
+
+/* 共通 */
+:root {
+  --main-color: #0806a3;
+  --accent-color: rgb(0, 152, 211);
+  --sub-color: #4e98f3;
+  --base-color: #f6f6f6;
+  --logo-color: #fff;
+  --text-color: #3f3b3b;
+  --sns-icon-color: #fff;
+  /* --font-heading: "Zen Maru Gothic", sans-serif; */
+  /* 見出し用 */
+}
+
+/* レイアウト */
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+main {
+  width: 100%;
+  height: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--base-color);
+}
+
+.contents-wrapper {
+  width: 90%;
+  max-width: 1080px;
+  height: auto;
+  background-color: var(--base-color);
+  margin: 0 auto;
+}
+
+/* google fonts */
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 見出し */
+h1,
+h2,
+h3 {
+  margin: 1rem 0;
+  padding: 0;
+  letter-spacing: 0.05em;
+}
+
+h2 {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--sub-color);
+}
+
+/* 文字 */
+p {
+  line-height: 1.7;
+  color: var(--text-color);
+}
+
+/* 文字サイズ */
+.text-large {
+  font-size: 2rem;
+}
+
+.text-medium {
+  font-size: 1.5rem;
+}
+
+.small {
+  font-size: 0.8rem;
+}
+
+/* 余白 */
+.mb-1 {
+  margin-bottom: 0.5em;
+}
+
+.mb-2 {
+  margin-bottom: 2em;
+}
+
+.mb-3 {
+  margin-bottom: 3em;
+}
+
+section {
+  scroll-margin-top: 100px;
+  margin: 100px auto;
+}
+
+/* 画像 */
+img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  margin: 0;
+  /* 不要な余白をリセット */
+  border: none;
+  /* デフォルトの枠線を消す */
+  /* vertical-align: middle; */
+  /* テキストと画像のズレを調整 */
+}
+
+/* リスト */
+ul {
+  list-style: none;
+}
+
+/* リンク */
+a {
+  text-decoration: none;
+}
+
+
+/* ヘッダー */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  color: var(--logo-color);
+  background: var(--main-color);
+  width: 100%;
+  height: 60px;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--main-color);
+  width: 100%;
+  height: 60px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 60px;
+  height: 30px;
+}
+
+.header-logo {
+  color: var(--logo-color);
+  font-weight: bold;
+}
+
+nav.nav ul.item {
+  display: flex;
+  align-items: center;
+
+}
+
+li.list {
+  padding-right: 1.5rem;
+}
+
+.list a {
+  font-weight: bold;
+}
+
+.list-contact a {
+  display: inline-block;
+  background: rgba(0, 152, 211, 1);
+  color: #fff;
+  font-style: 0.9rem;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 0.5rem 1.2rem;
+}
+
+.list-contact a:hover {
+  background: rgba(0, 152, 211, 0.8);
+}
+
+#menu-btn,
+.nav-hidden {
+  display: none;
+}
+
+
+/* ファーストビュー */
+.fv-mobile {
+  display: none;
+}
+
+.fv {
+  background-color: #d9d9d9;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ファーストビュー 画像*/
+.fv-img {
+  width: 100%;
+  height: 100vh;
+  background-image: url(images/hero-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* background: #abdce1; */
+}
+
+/* キャッチコピーも前面に */
+.fv-catch {
+  width: 50%;
+  height: auto;
+  background: #867d7d;
+}
+
+.fv-catch p {
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.05em;
+  /* 文字間隔を少し広げる */
+}
+
+/* 業務内容 */
+.grid-container {
+  display: grid;
+  /* 1. カラムの作成：1つの幅を「最小250px、最大1fr」にして、自動で詰め込む */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  /* 2. カード同士のすき間 */
+  gap: 20px;
+
+  /* 3. 全体の余白（任意） */
+  padding: 20px;
+}
+
+/* カードのデザイン（おまけ） */
+.card {
+  /* border: 1px solid #ddd; */
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  padding: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  /* 画像を枠いっぱいに綺麗に収める */
+  border-radius: 8px;
+}
+
+/* 採用情報 */
+.btn,
+.form-btn {
+  display: inline-block;
+  background: rgba(0, 74, 211, 1);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 0.5rem 1.2rem;
+}
+
+.btn,
+.form-btn:hover {
+  background-color: rgba(0, 74, 211, 0.7);
+}
+
+/* 採用情報 */
+caption {
+  padding: 1.5rem;
+  font-weight: bold;
+}
+
+.recruit-table th,
+.recruit-table td {
+  vertical-align: top;
+}
+
+.recruit-table th {
+  width: 8em;
+}
+
+.recruit-table td {
+  line-height: 1.6;
+}
+
+/* お問い合わせフォーム */
+#contact p {
+  text-align: left;
+  /* 必要なら */
+}
+
+.form01 {
+  margin: 5rem auto;
+  max-width: 90%;
+  width: 100%;
+  max-width: 700px;
+  overflow-x: auto;
+}
+
+.form-inner {
+  margin-bottom: 2rem;
+}
+
+.form-label {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.form-label label {
+  vertical-align: middle;
+  /* ラベルと必須マークをそろえる */
+}
+
+.required {
+  display: inline-block;
+  background: #EA7474;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0.2rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.radio-inner {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  border: none;
+  /* 明示的に消す */
+  outline: none;
+  /* フォーカス時の枠も消す（必要なら） */
+  box-shadow: none;
+  /* 影が枠に見える場合もあるので */
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  height: 1.5rem;
+  background: #fff;
+  padding: 0.5rem;
+}
+
+input[type="date"] {
+  width: 100%;
+  height: 1.5rem;
+  background: #fff;
+  padding: 0.5rem;
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  background: #fff;
+  padding: 1rem;
+}
+
+.form-btn {
+  display: block;
+  width: 130px;
+  background: var(--accent-color);
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.5rem 0;
+  margin: 4rem auto;
+  border: none;
+  /* 明示的に消す */
+  outline: none;
+  /* フォーカス時の枠も消す（必要なら） */
+  box-shadow: none;
+  /* 影が枠に見える場合もあるので */
+}
+
+/* 会社概要 */
+table {
+  margin: 0 auto;
+}
+
+th,
+td {
+  text-align-last: left;
+  padding: 1rem 1.5rem;
+}
+
+/* フッター */
+footer {
+  background: var(--main-color);
+  color: #fff;
+  padding-top: 2rem;
+}
+
+footer nav {
+  margin-top: 2rem;
+}
+
+.footer-container {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+/* nav.nav {
+  margin: 2rem;
+} */
+.footer-logo {
+  color: #fff;
+  font-family: var(--font-heading);
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+
+nav.nav ul.item {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav.nav ul.item li.list {
+  padding: 0 0.5rem;
+}
+
+nav.nav ul.item li.list a {
+  font-weight: bold;
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+ul.sns-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  margin: 2rem auto;
+}
+
+.sns-list i {
+  font-size: 36px;
+  color: #fff;
+  transition: color 0.3s ease;
+  padding: 1rem;
+}
+
+.sns-list a:hover i {
+  color: var(--sub-color);
+}
+
+.copyright {
+  background: var(--main-color);
+  color: #fff;
+  padding: 1rem;
+}
+
+/* モバイル版 */
+@media(max-width:768px) {
+  .header-inner {
+    margin: 0;
+    padding: 0 1rem;
+    align-items: center;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .text-large {
+    font-size: 1.5rem;
+  }
+
+  /* ハンバーガーメニュー */
+  #menu-btn {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 1.2rem;
+    right: 1rem;
+    z-index: 5;
+  }
+
+  #menu-btn span,
+  #menu-btn span::before,
+  #menu-btn span::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    border-radius: 3px;
+    background: #fff;
+    position: absolute;
+    transition: 0.2s;
+  }
+
+  #menu-btn span {
+    top: 0;
+  }
+
+  #menu-btn span::before {
+    top: 8px;
+  }
+
+  #menu-btn span::after {
+    top: 16px;
+  }
+
+  #nav-input:checked~#menu-btn span {
+    top: 8px;
+    transform: rotate(45deg);
+  }
+
+  #nav-input:checked~#menu-btn span::before {
+    opacity: 0;
+  }
+
+  #nav-input:checked~#menu-btn span::after {
+    top: 0;
+    transform: rotate(-90deg);
+  }
+
+  .logo {
+    width: 50px;
+    height: 20px;
+  }
+
+  nav.nav {
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 4;
+    background: var(--main-color);
+    transition: 0.5s;
+  }
+
+  nav.nav ul.item {
+    display: block;
+    padding: 4rem 2rem;
+  }
+
+  nav.nav ul.item li.list {
+    padding-left: 0;
+    padding-bottom: 1.5rem;
+  }
+
+  #nav-input:checked~.header-inner nav.nav {
+    right: 0;
+  }
+
+  /* ファーストビュー */
+  .fv {
+    display: none;
+  }
+
+  .fv-mobile {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/hero-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+}
+
+/* キャッチコピーも前面に */
+.fv-catch {
+  width: 70%;
+  height: auto;
+  background: rgb(134, 125, 125, 0.7);
+  position: absolute;
+  top: 60%;
+}
+
+.fv-catch p {
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.05em;
+  font-family: serif;
+  font-weight: bold;
+  font-size: 2rem;
+  /* 文字間隔を少し広げる */
+}
+
+/* フォーム */
+.form01 {
+  padding: 1rem;
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.sns-list {
+  margin: 0;
+  padding: 0;
+}
+
+.form01 {
+  width: 90%;
+}
+
+/* デスクトップ版 */
+@media(min-width:769px) {
+  .cards-container {
+    max-width: 60%;
+  }
+
+
+  ul.sns-container {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    margin: 0 auto;
+  }
+
+  ul.sns-container li.list {
+    padding-right: 0;
+    margin-top: 3rem;
+  }
+
+  ul.sns-container li.list img {
+    width: 50px;
+    height: auto;
+  }
+
+  nav.nav ul.item li.list {
+    padding: 0 1rem;
+  }
+
+  nav.nav ul.item li.list a {
+    font-weight: bold;
+    color: #fff;
+    font-size: 1rem;
+  }
+
+
+  .line-qr-code {
+    margin-bottom: 3em;
+  }
+
+}

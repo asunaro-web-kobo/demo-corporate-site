@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>○○測量株式会社</title>
+  <meta name="description" content="地元密着の測量会社は○○測量株式会社">
+  <!-- ファビコン -->
+  <link rel="icon" type="image/png" href="#">
+
+  <!-- リセットCSS -->
+  <link rel="stylesheet" href="httpss://unpkg.com/ress/dist/res.min.css">
+
+  <!-- Google フォント -->
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head> <!-- オリジナルCSS -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <!-- ヘッダー -->
+  <header class="header">
+    <input id="nav-input" type="checkbox" class="nav-hidden">
+
+    <label id="menu-btn" for="nav-input">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <div class="header-inner">
+      <h1 class="header-logo text-large">○○測量株式会社</h1>
+      <nav class="nav">
+        <ul class="item">
+          <li class="list"><a href="index.html">Home</a></li>
+          <li class="list"><a href="index.html#works">事業内容</a></li>
+          <li class="list"><a href="company.html">会社概要</a></li>
+          <li class="list-contact"><a href="recruit.html">採用情報</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <!-- コンテンツ -->
+    <div class="contents-wrapper">
+      <!-- 問い合わせフォーム -->
+      <section class="recruit">
+        <h2>採用情報</h2>
+        <p>勤務条件や応募に必要な情報をまとめています。ご不明な点があればお気軽にお問い合わせください。</p>
+
+        <table class="recruit-table">
+          <caption>募集要項</caption>
+          <tbody>
+            <tr>
+              <th scope="row">募集職種</th>
+              <td>測量スタッフ（正社員）</td>
+            </tr>
+            <tr>
+              <th scope="row">業務内容</th>
+              <td>現場での測量作業補助、データ整理、機材の準備・片付け など</td>
+            </tr>
+            <tr>
+              <th scope="row">応募資格</th>
+              <td>普通自動車運転免許（AT限定可）／未経験者歓迎</td>
+            </tr>
+            <tr>
+              <th scope="row">歓迎スキル</th>
+              <td>測量の実務経験、測量士補・測量士の資格をお持ちの方</td>
+            </tr>
+            <tr>
+              <th scope="row">年齢</th>
+              <td>長期的に働いていただける方を歓迎しています。</td>
+            </tr>
+            <tr>
+              <th scope="row">雇用形態</th>
+              <td>正社員</td>
+            </tr>
+            <tr>
+              <th scope="row">勤務地</th>
+              <td>○○市内および近郊の現場</td>
+            </tr>
+            <tr>
+              <th scope="row">勤務時間</th>
+              <td>8:00〜17:00（休憩あり）</td>
+            </tr>
+            <tr>
+              <th scope="row">休日・休暇</th>
+              <td>日曜・祝日、夏季・年末年始休暇</td>
+            </tr>
+            <tr>
+              <th scope="row">給与</th>
+              <td>経験・能力を考慮のうえ決定</td>
+            </tr>
+            <tr>
+              <th scope="row">待遇・福利厚生</th>
+              <td>社会保険完備、交通費支給、資格取得支援制度 など</td>
+            </tr>
+            <tr>
+              <th scope="row">試用期間</th>
+              <td>あり（3か月）※条件変更なし</td>
+            </tr>
+            <tr>
+              <th scope="row">応募方法</th>
+              <td>お問い合わせフォームまたはメールよりご連絡ください。</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <div class="form01 mb-5">
+        <form action="asunarowebkobo@gmail.com" method="post">
+          <div class="form-inner">
+            <div class="form-label">
+              <label for="name">お名前</label>
+              <span class="required">必須</span>
+            </div>
+            <div class="form-input">
+              <input type="text" id="name" name="name" autocomplete="name" required>
+            </div>
+          </div>
+          <div class="form-inner">
+            <div class="form-label">
+              <label for="email">メールアドレス</label>
+              <span class="required">必須</span>
+            </div>
+            <div class="form-input">
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="form-inner">
+            <div class="form-label">
+              <label for="details">お問い合わせ内容</label>
+            </div>
+            <div class="form-input">
+              <textarea id="details" name="details"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="form-btn">送信する</button>
+          <small>※デモサイトにつき送信はできません。</small>
+
+        </form>
+      </div>
+      </section>
+  </main>
+  <!-- フッター -->
+  <!-- フッター -->
+  <footer>
+    <div class="footer-container">
+      <h1 class="header-logo text-large">○○測量株式会社</h1>
+      <!-- フッターナビ -->
+      <nav class="nav">
+        <ul class="item">
+          <li class="list"><a href="index.html">Home</a></li>
+          <li class="list"><a href="index.html#works">事業内容</a></li>
+          <li class="list"><a href="company.html">会社概要</a></li>
+          <li class="list-contact"><a href="recruit.html">採用情報</a></li>
+        </ul>
+      </nav>
+      <!-- SNS -->
+      <ul class="sns-list">
+        <li class="sns-links__item"><a href="https://www.instagram.com/asunarowebkobo/" target="_blank" rel="noopener">
+            <i class="fa-brands fa-instagram"></i>
+          </a></li>
+        <li class="sns-links__item">
+          <a href="https://x.com/KoboWeb68951" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+        </li>
+        <li class="sns-links__item">
+          <a href="https://lin.ee/kY6rThw" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-line"></i>
+          </a>
+        </li>
+      </ul>
+      <p class="copyright"><small>&copy;2025 Sample Company</small></p>
+    </div>
+  </footer>
+</body>
+
+</html>
