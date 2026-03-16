@@ -582,7 +582,7 @@ ul.sns-list {
     justify-content: center;
     position: relative;
   }
-}
+
 
 .fv-catch {
   width: auto;
@@ -632,6 +632,8 @@ footer {
 .form01 {
   width: 90%;
 }
+
+
 
 /* デスクトップ版 */
 @media(min-width:769px) {
