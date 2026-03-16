@@ -224,7 +224,8 @@ li.list {
 .fv-catch p {
   color: var(--main-color);
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  letter-spacing: 0.05em;
+  line-height: 2;
+  letter-spacing: 0.1em;
   /* 文字間隔を少し広げる */
   font-family: serif;
   font-weight: 700;
@@ -586,55 +587,63 @@ ul.sns-list {
   }
 
 
-.fv-catch {
-  width: auto;
-  /* 横幅は中身に合わせる */
-  height: 80%;
-  /* 画面の縦方向に伸ばす */
-  background: rgba(134, 125, 125, 0.7);
-  position: absolute;
-  top: 50%;
-  right: 50px;
-  /* 右側に寄せる */
-  transform: translateY(-50%);
-  writing-mode: vertical-rl;
-  /* ← 縦書きにする */
-  text-orientation: upright;
-  /* ← 文字を立てる */
-  padding: 10px 8px;
-  /* 縦書き用の余白 */
-}
+  .fv-catch {
+    width: auto;
+    /* 横幅は中身に合わせる */
+    height: 60%;
+    /* 画面の縦方向に伸ばす */
+    background: rgba(134, 125, 125, 0.7);
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    /* 右側に寄せる */
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    /* ← 縦書きにする */
+    text-orientation: upright;
+    /* 上揃え */
+    text-orientation: upright;
+    /* ← 文字を立てる */
+    padding: 50px 8px;
+    /* 縦書き用の余白 */
+    text-align: start;
+    
+  }
 
-.fv-catch p {
-  font-size: 2rem;
-  line-height: 1.8;
-  letter-spacing: 0.1em;
-  font-family: serif;
-}
-/* 採用情報 */
-.recruit-table th {
-  width: 5em;
-}/* フォーム */
-.form01 {
-  padding: 1rem;
-}
+  .fv-catch p {
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1.8;
+    letter-spacing: 0.1em;
+    font-family: serif;
+  }
 
-/* フッター */
-footer {
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
+  /* 採用情報 */
+  .recruit-table th {
+    width: 5em;
+  }
 
-.sns-list {
-  margin: 0;
-  padding: 0;
-}
+  /* フォーム */
+  .form01 {
+    padding: 1rem;
+  }
 
-.form01 {
-  width: 90%;
-}
+  /* フッター */
+  footer {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
 
+  .sns-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  .form01 {
+    width: 90%;
+  }
+}
 
 
 /* デスクトップ版 */
