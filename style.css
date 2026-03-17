@@ -595,7 +595,7 @@ ul.sns-list {
     background: rgba(134, 125, 125, 0.7);
     position: absolute;
     top: 50%;
-    right: 10%;
+    right: 5%;
     /* 右側に寄せる */
     transform: translateY(-50%);
     writing-mode: vertical-rl;
